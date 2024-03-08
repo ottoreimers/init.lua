@@ -1,12 +1,6 @@
 return {
-    "catppuccin/nvim",
-    lazy = false,
-    name = "catpuccin",
-    priority = 1000,
+    "rebelot/kanagawa.nvim",
     config = function()
-        vim.cmd.colorscheme("catppuccin")
-        require("catppuccin").setup({
-            flavour = "mocha"
-        })
+        vim.cmd.colorscheme("kanagawa")
     end,
 }
