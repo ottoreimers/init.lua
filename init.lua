@@ -11,5 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 vim.wo.number = true
+vim.wo.relativenumber = true
 require("vim-cmd-options")
 require("lazy").setup("plugins")
