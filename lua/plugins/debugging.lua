@@ -4,10 +4,11 @@ return {
 		"theHamsta/nvim-dap-virtual-text",
 		"rcarriga/nvim-dap-ui",
 		"nvim-telescope/telescope-dap.nvim",
+		"nvim-neotest/nvim-nio",
 	},
 	config = function()
 		local dap = require("dap")
-        local dapui = require("dapui")
+		local dapui = require("dapui")
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
