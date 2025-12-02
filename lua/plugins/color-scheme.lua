@@ -1,8 +1,8 @@
 return {
-	"wtfox/jellybeans.nvim",
-	lazy = false,
-	priority = 1000,
+	"nendix/zen.nvim",
+	-- name = "kanagawa",
+    priority = 1000,
 	config = function()
-		vim.cmd("colorscheme jellybeans")
-	end,
+		vim.cmd("colorscheme zen")
+	end
 }
