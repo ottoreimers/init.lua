@@ -5,11 +5,24 @@ return {
             "rafamadriz/friendly-snippets",
             "giuxtaposition/blink-cmp-copilot",
         },
-        version = "1.*",
+        version = false,
+        build = "cargo build --release",
         opts = {
             keymap = {
                 preset = "default",
-                ['<CR>'] = { 'select_and_accept', 'fallback' },
+                ['<CR>'] = { 'accept', 'fallback' },
+                ["<Tab>"] = {
+                    "snippet_forward",
+                    function()
+                        return require("sidekick").nes_jump_or_apply()
+                    end,
+                    function()
+                        if vim.lsp.inline_completion then
+                            return vim.lsp.inline_completion.get()
+                        end
+                    end,
+                    "fallback",
+                },
             },
             appearance = {
                 nerd_font_variant = "mono",
